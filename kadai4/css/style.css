@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #4f260b;
+    font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+        "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+        "ＭＳ 明朝", serif;
+    font-feature-settings: "palt";
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+/*ヘッダー*/
+
+body {
+    color: #e8d9bf;
+    background-color: #e8d9bf;
+}
+
+.header_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 7% 0 2.8%;
+}
+
+.header_logo {
+    width: 226px;
+}
+
+.pc_nav ul {
+    display: flex;
+}
+
+.pc_nav ul li {
+    width: 105px;
+    margin-right: 50px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    text-align: center;
+}
+
+/*メイン*/
+
+.main_lead {
+    text-align: center;
+    padding: 104px 0 0 0;
+}
+
+.list1 {
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+.list2 {
+    margin-bottom: 20px;
+    font-size: 82px;
+    line-height: 1.17;
+    letter-spacing: 0.1em;
+}
+
+.list3 {
+    font-size: 23px;
+    line-height: 1.65;
+    letter-spacing: 0.1em;
+    margin-bottom: 100px;
+}
+
+/*ABOUT US*/
+
+.about {
+    justify-content: flex-end;
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about_img {
+    width: 100%;
+}
+
+.about_content h2 {
+    margin-bottom: 60px;
+    padding-top: 56px;
+    text-align: left;
+}
+
+.about_content h3 {
+    font-size: 44px;
+    line-height: 1.38;
+    margin-bottom: 23px;
+}
+
+.about_content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
