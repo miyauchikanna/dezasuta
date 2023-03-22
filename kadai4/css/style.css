@@ -123,7 +123,6 @@ html {
 /*ABOUT US*/
 
 .about {
-    justify-content: flex-end;
     display: flex;
     max-width: 1000px;
     margin: 0 auto;
@@ -134,15 +133,23 @@ html {
     margin-right: 78px;
 }
 
+.about_img img {
+    border-bottom-right-radius: 80px;
+}
+
+.about_content {
+    padding-right: 10px;
+    width: 41%;
+}
+
 .about_content h2 {
     margin-bottom: 50px;
     padding-top: 56px;
     text-align: left;
     width: 272px;
-    height: 77px;
 }
 
-.about_content h3 {
+.about_content .about_part {
     font-size: 44px;
     line-height: 1.38;
     margin-bottom: 23px;
@@ -152,7 +159,6 @@ html {
 .about_content p {
     font-size: 16px;
     line-height: 1.6;
-    width: 410px;
 }
 
 /*MENU*/
@@ -165,10 +171,12 @@ html {
 }
 
 .menu_img {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 48px;
+    margin: 0 auto 38px;
     width: 151px;
+}
+
+.menu_item img {
+    border-top-right-radius: 40px;
 }
 
 .menu_block {
@@ -180,7 +188,7 @@ html {
     width: 30%;
 }
 
-.menu_item h2 {
+.menu_item h3 {
     color: #d30202;
     margin-top: -12px;
     margin-bottom: 14px;
@@ -198,8 +206,7 @@ html {
 
 .gallery_img {
     display: block;
-    margin: 0 auto;
-    margin-bottom: 27px;
+    margin: 0 auto 27px;
     width: 245px;
 }
 
@@ -218,8 +225,7 @@ html {
 
 .event_img {
     display: block;
-    margin: 0 auto;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
     width: 173px;
     margin-top: -42px;
 }
@@ -237,7 +243,14 @@ html {
     text-align: right;
     font-size: 23px;
     line-height: 1;
+}
+
+.event_block ul li + li {
     margin-top: 20px;
+}
+
+.event_block ul li a {
+    text-decoration: underline;
 }
 
 .event_block ul li time {
@@ -248,8 +261,7 @@ html {
 
 .access_img {
     display: block;
-    margin: 0 auto;
-    margin-bottom: 36px;
+    margin: 0 auto 36px;
     width: 213px;
     margin-top: -32px;
 }
@@ -263,7 +275,7 @@ html {
 /*FOTTER*/
 
 footer {
-    padding: 75px;
+    padding: 75px 10px;
     background-color: #fff;
 }
 
@@ -274,9 +286,8 @@ footer {
 
 .footer_block {
     display: flex;
-    margin: 0 auto;
+    margin: 0 auto 70px;
     max-width: 1000px;
-    margin-bottom: 70px;
 }
 
 .footer_block p {
