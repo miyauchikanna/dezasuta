@@ -95,6 +95,9 @@ section {
     section {
         padding-top: 0px;
     }
+    .header_logo {
+        width: 187px;
+    }
 }
 
 html {
@@ -289,7 +292,7 @@ html {
     line-height: 1.6;
 }
 
-.about_content div {
+.about_img_sp {
     display: none;
 }
 
@@ -314,6 +317,7 @@ html {
     .about_content {
         width: 100%;
         margin-top: 53px;
+        padding-right: 0;
     }
     .about_content h2 {
         text-align: center;
@@ -333,6 +337,9 @@ html {
         padding: 0 20px;
         margin-bottom: 50px;
     }
+    .about_img_sp {
+        display: block;
+    }
 }
 
 /*MENU*/
@@ -351,6 +358,7 @@ html {
 
 .menu_item img {
     border-top-right-radius: 40px;
+    width: 100%;
 }
 
 .menu_block {
@@ -390,7 +398,7 @@ html {
     }
     .menu_item {
         width: 100%;
-        margin-bottom: 88px;
+        margin-bottom: 50px;
     }
     .menu_item p {
         line-height: 1.58;
@@ -455,6 +463,9 @@ html {
 
 .event_block ul li a {
     text-decoration: underline;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .event_block ul li time {
@@ -573,5 +584,7 @@ footer {
 @media screen and (max-width: 767px) {
     .pagetop {
         width: 100px;
+        right: 20px;
+        bottom: 20px;
     }
 }
