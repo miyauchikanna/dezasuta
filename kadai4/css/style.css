@@ -109,10 +109,60 @@ html {
     display: none;
 }
 
+/*スライダー調整*/
+.slick-dots {
+    bottom: 20px;
+}
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before {
+    color: #fff;
+}
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+.slick-prev {
+    content: "";
+    width: 19px;
+    height: 19px;
+    border: 0px;
+    border-top: solid 4px #fff;
+    border-right: solid 4px #fff;
+    margin-top: -5px;
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+}
+.slick-next {
+    content: "";
+    width: 19px;
+    height: 19px;
+    border: 0px;
+    border-top: solid 4px #fff;
+    border-right: solid 4px #fff;
+    margin-top: -5px;
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    right: 22%;
+    transform: translate(-50%, -50%);
+}
+.slick-prev.slick-arrow {
+    transform: rotate(-135deg);
+}
+.slick-next.slick-arrow {
+    transform: rotate(45deg);
+}
+.slick-prev:before,
+.slick-next:before {
+    display: none;
+}
 @media screen and (max-width: 1100px) {
     .pc_nav {
         display: none;
     }
+
     /*ハンバーガー*/
     .sp_btn {
         display: block;
@@ -422,8 +472,19 @@ html {
         width: 142px;
         margin-bottom: 15px;
     }
-    .slide:not(:first-child) {
-        display: none;
+    .slick-slide img {
+        margin: auto;
+        width: 100%;
+    }
+    .slick-prev {
+        width: 30px;
+        height: 30px;
+        left: 5%;
+    }
+    .slick-next {
+        width: 30px;
+        height: 30px;
+        right: 5%;
     }
 }
 
