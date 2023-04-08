@@ -122,37 +122,33 @@ html {
 }
 .slick-prev {
     content: "";
-    width: 19px;
-    height: 19px;
+    width: 27px;
+    height: 27px;
     border: 0px;
     border-top: solid 4px #fff;
     border-right: solid 4px #fff;
-    margin-top: -5px;
     z-index: 100;
     position: absolute;
     top: 50%;
     left: 22%;
-    transform: translate(-50%, -50%);
 }
 .slick-next {
     content: "";
-    width: 19px;
-    height: 19px;
+    width: 27px;
+    height: 27px;
     border: 0px;
     border-top: solid 4px #fff;
     border-right: solid 4px #fff;
-    margin-top: -5px;
     z-index: 100;
     position: absolute;
     top: 50%;
     right: 22%;
-    transform: translate(-50%, -50%);
 }
 .slick-prev.slick-arrow {
-    transform: rotate(-135deg);
+    transform: translate(-50%, -50%) rotate(-135deg);
 }
 .slick-next.slick-arrow {
-    transform: rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
 }
 .slick-prev:before,
 .slick-next:before {
@@ -477,13 +473,13 @@ html {
         width: 100%;
     }
     .slick-prev {
-        width: 30px;
-        height: 30px;
+        width: 15px;
+        height: 15px;
         left: 5%;
     }
     .slick-next {
-        width: 30px;
-        height: 30px;
+        width: 15px;
+        height: 15px;
         right: 5%;
     }
 }
