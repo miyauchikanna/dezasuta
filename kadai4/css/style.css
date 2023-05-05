@@ -125,8 +125,8 @@ html {
     width: 27px;
     height: 27px;
     border: 0px;
-    border-top: solid 4px #fff;
-    border-right: solid 4px #fff;
+    border-top: solid 5px #fff;
+    border-right: solid 5px #fff;
     z-index: 100;
     position: absolute;
     top: 50%;
@@ -137,8 +137,8 @@ html {
     width: 27px;
     height: 27px;
     border: 0px;
-    border-top: solid 4px #fff;
-    border-right: solid 4px #fff;
+    border-top: solid 5px #fff;
+    border-right: solid 5px #fff;
     z-index: 100;
     position: absolute;
     top: 50%;
@@ -476,11 +476,15 @@ html {
         width: 15px;
         height: 15px;
         left: 5%;
+        border-top: solid 2px #fff;
+        border-right: solid 2px #fff;
     }
     .slick-next {
         width: 15px;
         height: 15px;
         right: 5%;
+        border-top: solid 2px #fff;
+        border-right: solid 2px #fff;
     }
 }
 

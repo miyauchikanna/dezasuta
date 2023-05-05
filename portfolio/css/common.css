@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #4d4d4d;
+    font-family: "fot-tsukuardgothic-std", "ヒラギノ丸ゴ Pro W4",
+        "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W3",
+        "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO";
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+/* 背景 */
+
+body {
+    background: linear-gradient(to bottom, #d5e7f2, #fff 80%);
+}
+
+/* フッター */
+
+footer {
+    background: linear-gradient(to top, #6fac00, #fff 89%);
+    padding-bottom: 30px;
+}
+
+.sns_btn {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.sns-btn li {
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.sns-btn li img {
+    width: 30px;
+}
+
+footer {
+    text-align: center;
+}
+
+.footer_nav ul {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1000px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.footer_nav li {
+    margin-left: 35px;
+}
