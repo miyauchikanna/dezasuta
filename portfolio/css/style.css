@@ -6,18 +6,6 @@
     width: 100%;
 }
 
-.header_nav ul {
-    display: flex;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 63px 90px 0 0;
-}
-
-.header_nav li {
-    margin-left: 50px;
-}
-
 .copy {
     position: absolute;
     left: 225px;
@@ -47,7 +35,7 @@
     justify-content: center;
 }
 
-.about_content img {
+.about_img {
     width: 373px;
 }
 
@@ -71,8 +59,6 @@
     line-height: 1.75;
     margin-bottom: 55px;
 }
-
-/* ボタン */
 
 .btn_1 {
     background: transparent;
@@ -132,12 +118,12 @@
 
 .works {
     text-align: center;
+    margin-top: 450px;
 }
 
 .works_title {
     width: 203px;
     margin: 0 auto 75px;
-    margin-top: 450px;
 }
 
 .works_slide {
@@ -203,8 +189,8 @@ textarea {
 
 .contact_part {
     position: absolute;
-    right: 280px;
-    top: 4070px;
+    right: 330px;
+    top: 4100px;
 }
 
 button {
@@ -213,4 +199,195 @@ button {
     border-radius: 99rem;
     border: 2px solid #6fb300;
     color: #fff;
+}
+
+/* aboutメイン */
+
+.sns a {
+    display: block;
+    width: 30px;
+}
+
+.sns {
+    justify-content: space-around;
+}
+
+.sns li {
+    padding: 0px 10px;
+}
+
+.about_name {
+    display: flex;
+}
+
+.about_name p {
+    font-size: 40px;
+    margin-right: 48px;
+}
+
+.about_name ul {
+    display: flex;
+    align-items: center;
+}
+
+.about_text4 {
+    margin-bottom: 8px;
+}
+
+.about_text5 {
+    margin-top: 80px;
+    line-height: 1.75;
+}
+
+.about_text6 {
+    margin-top: 40px;
+    line-height: 1.75;
+}
+
+.about_global {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+.about_global2 {
+    margin-right: 75px;
+}
+
+/* profile */
+
+.profile {
+    max-width: 690px;
+    margin: 0 auto;
+    margin-top: 300px;
+}
+
+.profile_title {
+    width: 256px;
+    margin: 0 auto 70px;
+}
+
+.profile_text1 {
+    line-height: 1.75;
+    margin-bottom: 40px;
+}
+
+.profile_text2 {
+    line-height: 1.75;
+}
+
+/* skill */
+
+.skill {
+    max-width: 717px;
+    margin: 0 auto;
+    margin-top: 260px;
+}
+
+.skill_title {
+    width: 153px;
+    margin: 0 auto 60px;
+}
+
+.skill dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill dt {
+    width: 15%;
+    margin-bottom: 10px;
+}
+
+.skill dd {
+    width: 85%;
+    margin-bottom: 10px;
+}
+
+/* favorite */
+
+.favorite {
+    max-width: 1000px;
+    margin: 0 auto 360px;
+    margin-top: 280px;
+}
+
+.favorite_block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.favorite_title {
+    width: 214px;
+    margin: 0 auto 85px;
+}
+
+.favorite_item {
+    width: 200px;
+}
+
+.favorite_item img {
+    width: 168px;
+}
+
+.favorite_item div {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.favorite_item h3 {
+    text-align: center;
+    margin-bottom: 13px;
+    font-size: 20px;
+}
+
+.favorite_item p {
+    line-height: 1.75;
+}
+
+/* あしらい */
+
+.part1 {
+    width: 178px;
+    position: absolute;
+    right: 130px;
+    top: 600px;
+}
+
+.part2 {
+    width: 99px;
+    position: absolute;
+    left: 50px;
+}
+
+/* 背景 */
+
+.profile_back {
+    position: absolute;
+    top: 800px;
+}
+
+/* thank you */
+
+.thankyou_img {
+    width: 1100px;
+}
+
+.thankyou_item {
+    position: absolute;
+    top: 350px;
+    right: 200px;
+    text-align: center;
+}
+
+.thankyou_item h2 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 82px;
+}
+
+.thankyou_item p {
+    line-height: 3;
 }
