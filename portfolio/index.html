@@ -248,7 +248,7 @@
                 autoplay: true,
                 autoplaySpeed: 2000,
                 infinite: true,
-                slidesToShow: 5,
+                slidesToShow: 7,
                 slidesToScroll: 1,
                 responsive: [
                     {
@@ -263,7 +263,16 @@
                 ]
             });
 
+        });
 
+        // ページトップフェードイン
+        $('.top').hide();
+        $(window).on('scroll', function () {
+            if ($(this).scrollTop() > 700) {
+                $('.top').fadeIn();
+            } else {
+                $('.top').fadeOut();
+            }
         });
 
     </script>

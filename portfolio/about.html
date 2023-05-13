@@ -24,6 +24,16 @@
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </nav>
+        <div class="sp_btn"><span></span></div>
+        <nav class="sp_nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html"><span>About</span></a></li>
+                <li><a href="index.html#service">Service</a></li>
+                <li><a href="works/index.html">Works</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
         <div class="top_part"><img src="img/leaf1@2x.png" alt="木"></div>
     </header>
 
@@ -119,7 +129,7 @@
         // ページトップフェードイン
         $('.top').hide();
         $(window).on('scroll', function () {
-            if ($(this).scrollTop() > 800) {
+            if ($(this).scrollTop() > 700) {
                 $('.top').fadeIn();
             } else {
                 $('.top').fadeOut();
