@@ -16,6 +16,50 @@
     font-size: 40px;
 }
 
+/* scroll */
+
+.scroll {
+    position: absolute;
+    top: 600px;
+    right: 80px;
+    width: 110px;
+    height: 110px;
+}
+
+.arrow {
+    position: absolute;
+    left: 44px;
+    top: 30px;
+}
+
+.arrow img {
+    height: 55px;
+}
+
+.circle img {
+    animation: scroll-anime 15s linear infinite;
+}
+
+@keyframes scroll-anime {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .copy {
+        left: 140px;
+        top: 475px;
+    }
+
+    .scroll {
+        top: 900px;
+    }
+}
+
 /* about */
 
 .about {
@@ -25,7 +69,7 @@
 }
 
 .about_title {
-    width: 203px;
+    width: 204px;
     margin: 0 auto;
 }
 
@@ -35,7 +79,7 @@
     justify-content: center;
 }
 
-.about_img {
+.about_img1 {
     width: 373px;
 }
 
@@ -67,12 +111,71 @@
     border: 2px solid #6fb300;
     color: #6fb300;
     transition: 0.5s;
+    position: relative;
 }
 
 .btn_1:hover {
     background-image: url(../img/btn@2x-80.jpg);
     background-size: cover;
     color: #fff;
+}
+
+.btn_1::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 22.5px;
+    left: 99px;
+    width: 33px;
+    height: 2px;
+    background: #6fb300;
+    transition: 0.3s;
+}
+.btn_1::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: -17px;
+    width: 13px;
+    height: 13px;
+    border: 2px solid;
+    border-color: transparent transparent #6fb300 #6fb300;
+    transform: rotate(-135deg);
+    transition: 0.3s;
+}
+
+.btn_1:hover::before {
+    left: 109px;
+}
+
+.btn_1:hover::after {
+    right: -27px;
+}
+
+@media screen and (max-width: 767px) {
+    .about {
+        margin-top: 180px;
+    }
+
+    .about_content {
+        display: block;
+    }
+
+    .about_img1 {
+        width: 268px;
+        margin: 0 auto;
+    }
+
+    .about_item {
+        max-width: 315px;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    .about_item a {
+        margin-left: 180px;
+    }
 }
 
 /* Service */
@@ -90,7 +193,7 @@
 }
 
 .service_title {
-    width: 195px;
+    width: 196px;
     margin: 0 auto 125px;
 }
 
@@ -114,21 +217,60 @@
     text-align: left;
 }
 
+@media screen and (max-width: 767px) {
+    .service {
+        margin-top: 230px;
+    }
+
+    .service_block {
+        display: block;
+        max-width: 315px;
+        margin: 0 auto;
+    }
+
+    .service_item {
+        width: 315px;
+        margin: 0 auto;
+        margin-bottom: 100px;
+    }
+}
+
 /* works */
 
 .works {
-    text-align: center;
     margin-top: 450px;
 }
 
 .works_title {
-    width: 203px;
+    width: 204px;
     margin: 0 auto 75px;
 }
 
 .works_slide {
-    display: flex;
     margin-bottom: 50px;
+    width: 640px;
+}
+
+.txt {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    max-width: 360px;
+}
+
+.txt dt {
+    width: 40%;
+    font-weight: bold;
+    padding-top: 25px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #6fb300;
+}
+
+.txt dd {
+    width: 60%;
+    padding-top: 25px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #6fb300;
 }
 
 .btn_2 {
@@ -138,6 +280,7 @@
     border: 2px solid #6fb300;
     color: #6fb300;
     transition: 0.5s;
+    position: relative;
 }
 
 .btn_2:hover {
@@ -146,10 +289,46 @@
     color: #fff;
 }
 
+.btn_2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 22.5px;
+    left: 113px;
+    width: 33px;
+    height: 2px;
+    background: #6fb300;
+    transition: 0.3s;
+}
+.btn_2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: -17px;
+    width: 13px;
+    height: 13px;
+    border: 2px solid;
+    border-color: transparent transparent #6fb300 #6fb300;
+    transform: rotate(-135deg);
+    transition: 0.3s;
+}
+
+.btn_2:hover::before {
+    left: 123px;
+}
+
+.btn_2:hover::after {
+    right: -27px;
+}
+
+@media screen and (max-width: 767px) {
+}
+
 /* contact */
 
 .contact_title {
-    width: 200px;
+    width: 201px;
     margin: 0 auto 75px;
     margin-top: 255px;
 }
@@ -175,6 +354,7 @@ textarea {
     background-color: #6fac00;
     opacity: 0.15;
     margin-top: 3px;
+    outline: 2px solid #6fac00;
 }
 
 input {
@@ -201,6 +381,29 @@ button {
     color: #fff;
 }
 
+@media screen and (max-width: 767px) {
+    .contact_title {
+        margin-bottom: 65px;
+    }
+
+    .contact_contact {
+        max-width: 315px;
+    }
+
+    .contact_text {
+        line-height: 1.75;
+    }
+
+    input,
+    textarea {
+        width: 315px;
+    }
+
+    .contact_part {
+        width: 148px;
+    }
+}
+
 /* aboutメイン */
 
 .sns a {
@@ -216,13 +419,18 @@ button {
     padding: 0px 10px;
 }
 
+.about_img {
+    width: 373px;
+}
+
 .about_name {
     display: flex;
 }
 
-.about_name p {
+.about_name h2 {
     font-size: 40px;
     margin-right: 48px;
+    font-weight: normal;
 }
 
 .about_name ul {
@@ -252,8 +460,52 @@ button {
     margin-top: 90px;
 }
 
+.img_sp {
+    display: none;
+}
+
 .about_global2 {
     margin-right: 75px;
+}
+
+@media screen and (max-width: 767px) {
+    .about_global {
+        display: block;
+    }
+
+    .about_img {
+        display: none;
+    }
+
+    .img_sp {
+        width: 268px;
+        display: inline;
+    }
+
+    .about_global {
+        margin-top: 115px;
+    }
+
+    .about_global2 {
+        max-width: 315px;
+        margin: 0 auto;
+    }
+
+    .about_text4 {
+        margin-top: 40px;
+    }
+
+    .about_text5 {
+        margin-top: 25px;
+    }
+
+    .about_text6 {
+        margin-top: 30px;
+    }
+
+    .about_text6 br {
+        display: none;
+    }
 }
 
 /* profile */
@@ -265,7 +517,7 @@ button {
 }
 
 .profile_title {
-    width: 256px;
+    width: 257px;
     margin: 0 auto 70px;
 }
 
@@ -278,6 +530,14 @@ button {
     line-height: 1.75;
 }
 
+@media screen and (max-width: 767px) {
+    .profile {
+        max-width: 315px;
+        margin: 0 auto;
+        margin-top: 260px;
+    }
+}
+
 /* skill */
 
 .skill {
@@ -287,7 +547,7 @@ button {
 }
 
 .skill_title {
-    width: 153px;
+    width: 154px;
     margin: 0 auto 60px;
 }
 
@@ -306,6 +566,22 @@ button {
     margin-bottom: 10px;
 }
 
+@media screen and (max-width: 767px) {
+    .skill {
+        max-width: 315px;
+        margin: 0 auto;
+        margin-top: 165px;
+    }
+
+    .skill dt {
+        width: 30%;
+    }
+
+    .skill dd {
+        width: 70%;
+    }
+}
+
 /* favorite */
 
 .favorite {
@@ -320,7 +596,7 @@ button {
 }
 
 .favorite_title {
-    width: 214px;
+    width: 216px;
     margin: 0 auto 85px;
 }
 
@@ -330,6 +606,7 @@ button {
 
 .favorite_item img {
     width: 168px;
+    height: 161px;
 }
 
 .favorite_item div {
@@ -341,10 +618,27 @@ button {
     text-align: center;
     margin-bottom: 13px;
     font-size: 20px;
+    font-weight: normal;
 }
 
 .favorite_item p {
     line-height: 1.75;
+}
+
+@media screen and (max-width: 767px) {
+    .favorite {
+        max-width: 315px;
+        margin: 0 auto 255px;
+        margin-top: 180px;
+    }
+
+    .favorite_block {
+        display: block;
+    }
+
+    .favorite_item {
+        margin: 0 auto 60px;
+    }
 }
 
 /* あしらい */
@@ -362,6 +656,18 @@ button {
     left: 50px;
 }
 
+@media screen and (max-width: 767px) {
+    .part1 {
+        width: 90px;
+        top: 700px;
+        right: 220px;
+    }
+
+    .part2 {
+        width: 70px;
+    }
+}
+
 /* 背景 */
 
 .profile_back {
@@ -369,17 +675,27 @@ button {
     top: 800px;
 }
 
+@media screen and (max-width: 767px) {
+    .profile_back {
+        top: 1000px;
+    }
+}
+
 /* thank you */
 
+.thankyou_block {
+    display: flex;
+}
+
 .thankyou_img {
-    width: 1100px;
+    width: 680px;
 }
 
 .thankyou_item {
-    position: absolute;
-    top: 350px;
-    right: 200px;
+    margin-top: 360px;
+    margin-right: 100px;
     text-align: center;
+    margin-right: auto;
 }
 
 .thankyou_item h2 {
@@ -390,4 +706,40 @@ button {
 
 .thankyou_item p {
     line-height: 3;
+}
+
+.thankyou_sp {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .thankyou_block {
+        display: block;
+    }
+
+    .thankyou_img {
+        display: none;
+    }
+
+    .thankyou_item {
+        top: 100px;
+        max-width: 315px;
+        margin: 0 auto;
+    }
+
+    .thankyou_item h2 {
+        margin-bottom: 20px;
+        margin-top: 105px;
+    }
+
+    .thankyou_item p {
+        line-height: 1.75;
+        margin-bottom: 45px;
+    }
+
+    .thankyou_sp {
+        display: block;
+        width: 680px;
+        margin-right: auto;
+    }
 }

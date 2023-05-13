@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canna design</title>
-    <meta name="description" content="気持ちや想い、届けます。愛を込めて。Web制作承ります。">
+    <title>About｜Canna design</title>
+    <meta name="description" content="Canna desingの自己紹介、できること、好きなものについて">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 
 <body>
@@ -17,10 +18,10 @@
         <nav class="header_nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href=""><span>About</span></a></li>
-                <li><a href="">Service</a></li>
-                <li><a href="">Works</a></li>
-                <li><a href="index.html">Contact</a></li>
+                <li><a href="about.html"><span>About</span></a></li>
+                <li><a href="index.html#service">Service</a></li>
+                <li><a href="works/index.html">Works</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="top_part"><img src="img/leaf1@2x.png" alt="木"></div>
@@ -29,9 +30,10 @@
     <section class="about_top">
         <div class="about_global">
             <div class="about_global2">
+                <div class="img_sp"><img src="img/about@2x.png" alt="後ろ姿"></div>
                 <p class="about_text4">かんな</p>
                 <div class="about_name">
-                    <p>Canna</p>
+                    <h2>Canna</h2>
                     <ul class="sns">
                         <li><a href=""><img src="img/inst_logo@2x.png" alt="instagram"></a></li>
                         <li><a href=""><img src="img/mail_logo@2x.png" alt="mail"></a></li>
@@ -98,11 +100,11 @@
     <footer>
         <nav class="footer_nav">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Service</a></li>
-                <li><a href="">Works</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#header">About</a></li>
+                <li><a href="index.html#service">Service</a></li>
+                <li><a href="works/index.html">Works</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </nav>
         <ul class="sns_btn">
@@ -112,6 +114,19 @@
         <p class="footer_item">@2023 Canna design</p>
     </footer>
     <div class="top"><a href="#header"><img src="img/top@2x.png" alt="top"></a></div>
+
+    <script>
+        // ページトップフェードイン
+        $('.top').hide();
+        $(window).on('scroll', function () {
+            if ($(this).scrollTop() > 800) {
+                $('.top').fadeIn();
+            } else {
+                $('.top').fadeOut();
+            }
+        });
+    </script>
+
 </body>
 
 </html>

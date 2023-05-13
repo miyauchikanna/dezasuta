@@ -5,43 +5,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canna design</title>
+    <title>Canna design｜気持ちや想い、届けます。愛を込めて。Web制作承ります。</title>
     <meta name="description" content="気持ちや想い、届けます。愛を込めて。Web制作承ります。">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 
 <body>
     <header class="header" id="header">
-        <div class="main"><img src="img/main.png" alt="空と葉"></div>
+        <div class="main">
+            <picture>
+                <source srcset="/Users/miyauchikanna/Desktop/dezasuta/portfolio/img/main_sp@2x.png"
+                    media="(max-width: 767px)">
+                <img src="img/main.png" alt="空と葉">
+            </picture>
+        </div>
         <nav class="header_nav">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Service</a></li>
-                <li><a href="">Works</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#header">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="works/index.html">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="sp_btn"><span></span></div>
+        <nav class="sp_nav">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="works/index.html">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <p class="copy">気持ちや想い、届けます。<br>愛を込めて。</p>
+        <div class="scroll">
+            <div class="arrow"><img src="img/scroll_arrow@2x.png" alt="矢印"></div>
+            <div class="circle"><img src="img/scroll@2x.png" alt="scroll"></div>
+        </div>
     </header>
 
     <section class="about">
         <h2 class="about_title"><img src="img/about_title@2x.png" alt="About"></h2>
         <div class="about_content">
-            <div class="about_img"><img src="img/about@2x.png" alt="後ろ姿"></div>
+            <div class="about_img1"><img src="img/about@2x.png" alt="後ろ姿"></div>
             <div class="about_item">
                 <p class="about_text1">Canna(かんな)</p>
                 <p class="about_text2">1998年7月11日<br>長野県生まれ1児の母です。</p>
                 <p class="about_text3">伝えたい想いを届けるため<br>たくさんの愛情を込めてデザインを作っていきます。</p>
-                <a class="btn_1" href="">About</a>
+                <a class="btn_1" href="about.html">About</a>
             </div>
         </div>
     </section>
 
-    <section class="service">
-        <h2 class="service_title"><img src="img/service_title 15@2x.png" alt="Service"></h2>
+    <section class="service" id="service">
+        <h2 class="service_title"><img src="img/service_title@2x.png" alt="Service"></h2>
         <div class="service_block">
             <div class="service_item">
                 <div><img src="img/service1@2x.png" alt="ノートとペン"></div>
@@ -65,30 +86,135 @@
     <section class="works">
         <h2 class="works_title"><img src="img/works_title@2x.png" alt="Works"></h2>
         <div class="works_slide">
-            <div class="slide"><img src="img/works1-80.jpg" alt="life"></div>
-            <div class="slide"><img src="img/works2-80.jpg" alt="desingcafe"></div>
-            <div class="slide"><img src="img/works3-80.jpg" alt="workers"></div>
-            <div class="slide"><img src="img/works4-80.jpg" alt="springsale"></div>
-            <div class="slide"><img src="img/works5-80.jpg" alt="trrrrip"></div>
-            <div class="slide"><img src="img/works6-80.jpg" alt="deluxeburger1"></div>
-            <div class="slide"><img src="img/works7-80.jpg" alt="deluxeburger2"></div>
+            <div class="slide">
+                <img src="img/works1-80.jpg" alt="life">
+                <dl class="txt">
+                    <dt>カテゴリ</dt>
+                    <dd>コーポレートサイト</dd>
+                    <dt>担当範囲</dt>
+                    <dd>デザイン</dd>
+                    <dt>制作期間</dt>
+                    <dd>1週間</dd>
+                    <dt>使用ツール</dt>
+                    <dd>Illustrator/Photoshop</dd>
+                    <dt>対応機種</dt>
+                    <dd>PC</dd>
+                </dl>
+            </div>
+            <div class="slide">
+                <img src="img/works2-80.jpg" alt="desingcafe">
+                <dl class="txt">
+                    <dt>カテゴリ</dt>
+                    <dd>コーポレートサイト</dd>
+                    <dt>担当範囲</dt>
+                    <dd>コーディング</dd>
+                    <dt>制作期間</dt>
+                    <dd>2週間</dd>
+                    <dt>使用言語</dt>
+                    <dd>HTML/CSS/jQuery</dd>
+                    <dt>対応機種</dt>
+                    <dd>PC/SP</dd>
+                </dl>
+            </div>
+            <div class="slide">
+                <img src="img/works3-80.jpg" alt="workers">
+                <dl class="txt">
+                    <dt>カテゴリ</dt>
+                    <dd>コーポレートサイト</dd>
+                    <dt>担当範囲</dt>
+                    <dd>デザイン(トレース)</dd>
+                    <dt>制作期間</dt>
+                    <dd>1週間</dd>
+                    <dt>使用ツール</dt>
+                    <dd>Illustrator/Photoshop</dd>
+                    <dt>対応機種</dt>
+                    <dd>PC/SP</dd>
+                </dl>
+            </div>
+            <div class="slide">
+                <img src="img/works4-80.jpg" alt="springsale">
+                <dl class="txt">
+                    <dt>カテゴリ</dt>
+                    <dd>バナー広告</dd>
+                    <dt>担当範囲</dt>
+                    <dd>デザイン(トレース)</dd>
+                    <dt>制作期間</dt>
+                    <dd>1週間</dd>
+                    <dt>使用ツール</dt>
+                    <dd>Illustrator/Photoshop</dd>
+                    <dt>対応機種</dt>
+                    <dd>PC/SP</dd>
+                </dl>
+            </div>
+            <div class="slide">
+                <img src="img/works5-80.jpg" alt="trrrrip">
+                <dl class="txt">
+                    <dt>カテゴリ</dt>
+                    <dd>バナー広告</dd>
+                    <dt>担当範囲</dt>
+                    <dd>デザイン(トレース)</dd>
+                    <dt>制作期間</dt>
+                    <dd>1週間</dd>
+                    <dt>使用ツール</dt>
+                    <dd>Illustrator/Photoshop</dd>
+                    <dt>対応機種</dt>
+                    <dd>PC/SP</dd>
+                </dl>
+            </div>
+            <div class="slide">
+                <img src="img/works6-80.jpg" alt="deluxeburger1">
+                <dl class="txt">
+                    <dt>カテゴリ</dt>
+                    <dd>バナー広告</dd>
+                    <dt>担当範囲</dt>
+                    <dd>デザイン</dd>
+                    <dt>制作期間</dt>
+                    <dd>1週間</dd>
+                    <dt>使用ツール</dt>
+                    <dd>Illustrator/Photoshop</dd>
+                    <dt>対応機種</dt>
+                    <dd>PC/SP</dd>
+                </dl>
+            </div>
+            <div class="slide">
+                <img src="img/works7-80.jpg" alt="deluxeburger2">
+                <dl class="txt">
+                    <dt>カテゴリ</dt>
+                    <dd>バナー広告</dd>
+                    <dt>担当範囲</dt>
+                    <dd>デザイン</dd>
+                    <dt>制作期間</dt>
+                    <dd>1週間</dd>
+                    <dt>使用ツール</dt>
+                    <dd>Illustrator/Photoshop</dd>
+                    <dt>対応機種</dt>
+                    <dd>PC/SP</dd>
+                </dl>
+            </div>
         </div>
-        <a class="btn_2" href="">View All</a>
+        <a class="btn_2" href="works/index.html">View All</a>
     </section>
 
     <section class="contact" id="contact">
         <h2 class="contact_title"><img src="img/contact_title@2x.png" alt="Contact"></h2>
         <div class="contact_contact">
             <p class="contact_text">仕事のご依頼・ご相談は、こちらからお気軽にお問い合わせください。</p>
-            <form action="" method="post">
+            <form
+                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfnAGrkHeTVh5Lx-PGB7j1Pc9iiCatIGYR4HuC4QdxZ6hSuTA/formResponse"
+                method="post" target="hidden_iframe" onsubmit="submitted=true;">
                 <label>お名前</label>
-                <input type="text" name="name">
+                <input id="name" type="text" name="entry.1401415548">
                 <label>メールアドレス</label>
-                <input type="email" name="email">
+                <input id="mail" type="email" name="entry.217772467">
                 <label>お問い合わせ内容</label>
-                <textarea name="inquiry"></textarea>
-                <button>送信する</button>
+                <textarea id="contents" name="entry.1352181913"></textarea>
+                <button type="submit" name="button" value="送信">送信する</button>
             </form>
+            <script type="text/javascript">
+                var submitted = false;
+            </script>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+                onload="if(submitted)  {window.location='thankyou.html';}"></iframe>
             <div class="contact_part"><img src="img/contact@2x.png" alt="木"></div>
         </div>
     </section>
@@ -96,11 +222,11 @@
     <footer>
         <nav class="footer_nav">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Service</a></li>
-                <li><a href="">Works</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#header">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="works/index.html">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <ul class="sns_btn">
@@ -109,7 +235,39 @@
         </ul>
         <p class="footer_item">@2023 Canna design</p>
     </footer>
-    <div class="top"><a href="#header"><img src="img/top@2x.png" alt="top"></a></div>
+    <div class="top" id="top"><a href="#header"><img src="img/top@2x.png" alt="top"></a></div>
+
+    <script>
+        $(function () {
+            $('.sp_btn, .sp_nav li').on('click', function () {
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open');
+            });
+
+            $('.slide').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                infinite: true,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: true
+                        }
+                    }
+                ]
+            });
+
+
+        });
+
+    </script>
+
 </body>
 
 </html>

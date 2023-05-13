@@ -77,6 +77,57 @@ body {
     margin-left: 50px;
 }
 
+.sp_nav,
+.sp_btn {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .header_nav {
+        display: none;
+    }
+
+    /* ハンバーガー */
+
+    .sp_btn {
+        display: block;
+        height: 23px;
+        cursor: pointer;
+        position: absolute;
+        top: 35px;
+        right: 30px;
+    }
+
+    .sp_btn span {
+        display: block;
+        position: relative;
+        top: 10px;
+        width: 33px;
+        height: 3px;
+        border-radius: 2px;
+        background: #6ac3dc;
+    }
+
+    .sp_btn span::before,
+    .sp_btn span::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 33px;
+        height: 3px;
+        border-radius: 2px;
+        background: #6ac3dc;
+    }
+
+    .sp_btn span::before {
+        bottom: 10px;
+    }
+
+    .sp_btn span::after {
+        top: 10px;
+    }
+}
+
 /* フッター */
 
 footer {
@@ -109,7 +160,8 @@ footer {
 }
 
 .footer_nav li {
-    margin-left: 35px;
+    margin-left: 18px;
+    margin-right: 18px;
 }
 
 .sns_btn a {
@@ -117,17 +169,40 @@ footer {
     width: 30px;
 }
 
+@media screen and (max-width: 767px) {
+    .footer_nav ul {
+        display: block;
+        justify-content: center;
+    }
+
+    .footer_nav li {
+        margin-bottom: 15px;
+    }
+}
+
 /* トップ */
 
 .top {
     position: fixed;
     width: 123px;
-    right: 180px;
+    right: 50px;
     bottom: 100px;
+}
+
+@media screen and (max-width: 767px) {
+    .top {
+        width: 94px;
+    }
 }
 
 /* あしらい */
 
 .top_part {
     width: 458px;
+}
+
+@media screen and (max-width: 767px) {
+    .top_part {
+        width: 275px;
+    }
 }
