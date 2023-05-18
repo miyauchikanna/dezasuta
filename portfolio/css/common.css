@@ -14,7 +14,9 @@ dl,
 dt,
 dd,
 ul,
-li {
+li,
+input,
+textarea {
     margin: 0;
     padding: 0;
     line-height: 1;
@@ -88,6 +90,18 @@ body {
     }
 
     /* ハンバーガー */
+
+    .sp_nav li {
+        color: #6ac3dc;
+        font-size: 24px;
+        margin-bottom: 32px;
+    }
+
+    .sp_nav ul {
+        position: absolute;
+        top: 182px;
+        right: 120px;
+    }
 
     .sp_btn {
         display: block;
@@ -192,6 +206,7 @@ footer {
 @media screen and (max-width: 767px) {
     .top {
         width: 94px;
+        right: 18px;
     }
 }
 

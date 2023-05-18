@@ -7,10 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canna design｜気持ちや想い、届けます。愛を込めて。Web制作承ります。</title>
     <meta name="description" content="気持ちや想い、届けます。愛を込めて。Web制作承ります。">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
@@ -31,7 +35,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="sp_btn"><span></span></div>
+        <div class="sp_btn open"><span></span></div>
         <nav class="sp_nav">
             <ul>
                 <li><a href="#header">Home</a></li>
@@ -42,13 +46,13 @@
             </ul>
         </nav>
         <p class="copy">気持ちや想い、届けます。<br>愛を込めて。</p>
-        <div class="scroll">
+        <a class="scroll" href="#about">
             <div class="arrow"><img src="img/scroll_arrow@2x.png" alt="矢印"></div>
             <div class="circle"><img src="img/scroll@2x.png" alt="scroll"></div>
-        </div>
+        </a>
     </header>
 
-    <section class="about">
+    <section class="about" id="about">
         <h2 class="about_title"><img src="img/about_title@2x.png" alt="About"></h2>
         <div class="about_content">
             <div class="about_img1"><img src="img/about@2x.png" alt="後ろ姿"></div>
@@ -84,6 +88,13 @@
     </section>
 
     <section class="works">
+        <div class="works_back">
+            <picture>
+                <source srcset="/Users/miyauchikanna/Desktop/dezasuta/portfolio/img/works_back_sp@2x.png"
+                    media="(max-width: 767px)">
+                <img src="img/works_back@2x.png" alt="背景">
+            </picture>
+        </div>
         <h2 class="works_title"><img src="img/works_title@2x.png" alt="Works"></h2>
         <div class="works_slide">
             <div class="slide">
@@ -192,7 +203,7 @@
                 </dl>
             </div>
         </div>
-        <a class="btn_2" href="works/index.html">View All</a>
+        <div class="works_btn"><a class="btn_2" href="works/index.html">View All</a></div>
     </section>
 
     <section class="contact" id="contact">
@@ -203,11 +214,11 @@
                 action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfnAGrkHeTVh5Lx-PGB7j1Pc9iiCatIGYR4HuC4QdxZ6hSuTA/formResponse"
                 method="post" target="hidden_iframe" onsubmit="submitted=true;">
                 <label>お名前</label>
-                <input id="name" type="text" name="entry.1401415548">
+                <input id="name" type="text" name="entry.1401415548" required>
                 <label>メールアドレス</label>
-                <input id="mail" type="email" name="entry.217772467">
+                <input id="mail" type="email" name="entry.217772467" required>
                 <label>お問い合わせ内容</label>
-                <textarea id="contents" name="entry.1352181913"></textarea>
+                <textarea id="contents" name="entry.1352181913" required></textarea>
                 <button type="submit" name="button" value="送信">送信する</button>
             </form>
             <script type="text/javascript">
@@ -244,11 +255,11 @@
                 $('.sp_btn').toggleClass('open');
             });
 
-            $('.slide').slick({
+            $('.works_slide').slick({
                 autoplay: true,
-                autoplaySpeed: 2000,
+                autoplaySpeed: 5000,
                 infinite: true,
-                slidesToShow: 7,
+                slidesToShow: 1,
                 slidesToScroll: 1,
                 responsive: [
                     {
@@ -257,7 +268,6 @@
                             slidesToShow: 1,
                             slidesToScroll: 1,
                             infinite: true,
-                            dots: true
                         }
                     }
                 ]

@@ -57,12 +57,14 @@
 
     .part1 {
         top: 700px;
-        left: 350px;
+        left: auto;
+        right: 0;
     }
 
     .part2 {
         top: 1435px;
-        left: 415px;
+        left: auto;
+        right: 0;
     }
 
     .part3 {

@@ -14,6 +14,7 @@
     text-indent: -8em;
     line-height: 1.75;
     font-size: 40px;
+    font-feature-settings: normal;
 }
 
 /* scroll */
@@ -51,12 +52,27 @@
 
 @media screen and (max-width: 767px) {
     .copy {
-        left: 140px;
+        left: 45px;
         top: 475px;
     }
 
     .scroll {
-        top: 900px;
+        top: 630px;
+        right: 8px;
+    }
+
+    .circle {
+        width: 74px;
+        margin: 0 auto;
+    }
+
+    .arrow {
+        left: 48px;
+        top: 18px;
+    }
+
+    .arrow img {
+        height: 37px;
     }
 }
 
@@ -241,6 +257,12 @@
     margin-top: 450px;
 }
 
+.works_back {
+    position: absolute;
+    width: 100%;
+    top: 2650px;
+}
+
 .works_title {
     width: 204px;
     margin: 0 auto 75px;
@@ -249,6 +271,8 @@
 .works_slide {
     margin-bottom: 50px;
     width: 640px;
+    margin: 0 auto;
+    padding-bottom: 75px;
 }
 
 .txt {
@@ -322,7 +346,65 @@
     right: -27px;
 }
 
+.works_btn {
+    text-align: center;
+}
+
+.slick-prev {
+    content: "";
+    width: 27px;
+    height: 27px;
+    border-top: solid 5px #6fb300;
+    border-right: solid 5px #6fb300;
+    position: absolute;
+    top: 30%;
+    left: -6%;
+}
+.slick-next {
+    content: "";
+    width: 27px;
+    height: 27px;
+    border-top: solid 5px #6fb300;
+    border-right: solid 5px #6fb300;
+    position: absolute;
+    top: 30%;
+    right: -10%;
+}
+
+.slick-prev.slick-arrow {
+    transform: translate(-50%, -50%) rotate(-135deg);
+}
+.slick-next.slick-arrow {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.slick-prev:before,
+.slick-next:before {
+    display: none;
+}
+
 @media screen and (max-width: 767px) {
+    .works_slide {
+        width: 315px;
+    }
+
+    .works_back {
+        top: 3900px;
+    }
+
+    .works_back img {
+        height: 993px;
+        width: 100%;
+    }
+
+    .slick-prev {
+        top: 21%;
+        left: -7%;
+    }
+    .slick-next {
+        top: 21%;
+        right: -14%;
+    }
 }
 
 /* contact */
@@ -351,14 +433,13 @@ textarea {
     display: block;
     width: 540px;
     border: none;
-    background-color: #6fac00;
-    opacity: 0.15;
+    background-color: rgba(111, 172, 0, 0.15);
     margin-top: 3px;
-    outline: 2px solid #6fac00;
+    color: #4d4d4d;
+    padding: 12px 12px;
 }
 
 input {
-    height: 30px;
     margin-bottom: 20px;
 }
 
@@ -370,7 +451,7 @@ textarea {
 .contact_part {
     position: absolute;
     right: 330px;
-    top: 4100px;
+    top: 4650px;
 }
 
 button {
@@ -379,6 +460,12 @@ button {
     border-radius: 99rem;
     border: 2px solid #6fb300;
     color: #fff;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.5;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
@@ -401,6 +488,8 @@ button {
 
     .contact_part {
         width: 148px;
+        top: 5780px;
+        right: 0px;
     }
 }
 
@@ -660,7 +749,7 @@ button {
     .part1 {
         width: 90px;
         top: 700px;
-        right: 220px;
+        right: 50px;
     }
 
     .part2 {
