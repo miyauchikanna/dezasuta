@@ -426,6 +426,9 @@
 
 .contact_part {
     width: 297px;
+    position: absolute;
+    right: 330px;
+    top: 4700px;
 }
 
 input,
@@ -446,12 +449,6 @@ input {
 textarea {
     height: 200px;
     margin-bottom: 30px;
-}
-
-.contact_part {
-    position: absolute;
-    right: 330px;
-    top: 4650px;
 }
 
 button {
