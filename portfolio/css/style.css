@@ -169,6 +169,16 @@
     right: -27px;
 }
 
+.about {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s, transform 1s;
+}
+.about.active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
 @media screen and (max-width: 767px) {
     .about {
         margin-top: 180px;
@@ -233,6 +243,16 @@
     text-align: left;
 }
 
+.service {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s, transform 1s;
+}
+.service.active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
 @media screen and (max-width: 767px) {
     .service {
         margin-top: 230px;
@@ -260,7 +280,7 @@
 .works_back {
     position: absolute;
     width: 100%;
-    top: 2650px;
+    top: -250px;
 }
 
 .works_title {
@@ -359,6 +379,7 @@
     position: absolute;
     top: 30%;
     left: -6%;
+    border-radius: 0;
 }
 .slick-next {
     content: "";
@@ -369,6 +390,7 @@
     position: absolute;
     top: 30%;
     right: -10%;
+    border-radius: 0;
 }
 
 .slick-prev.slick-arrow {
@@ -383,13 +405,19 @@
     display: none;
 }
 
+.works {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 1.5s, transform 1s;
+}
+.works.active {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
 @media screen and (max-width: 767px) {
     .works_slide {
         width: 315px;
-    }
-
-    .works_back {
-        top: 3900px;
     }
 
     .works_back img {
@@ -399,11 +427,11 @@
 
     .slick-prev {
         top: 21%;
-        left: -7%;
+        left: -4%;
     }
     .slick-next {
         top: 21%;
-        right: -14%;
+        right: -12%;
     }
 }
 
@@ -427,8 +455,8 @@
 .contact_part {
     width: 297px;
     position: absolute;
-    right: 330px;
-    top: 4700px;
+    right: 300px;
+    top: 530px;
 }
 
 input,
@@ -465,6 +493,16 @@ button:hover {
     cursor: pointer;
 }
 
+.contact {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s, transform 1s;
+}
+.contact.active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
 @media screen and (max-width: 767px) {
     .contact_title {
         margin-bottom: 65px;
@@ -485,8 +523,9 @@ button:hover {
 
     .contact_part {
         width: 148px;
-        top: 5780px;
-        right: 0px;
+        top: 630px;
+        right: 0;
+        left: auto;
     }
 }
 
@@ -554,6 +593,16 @@ button:hover {
     margin-right: 75px;
 }
 
+.about_top {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s, transform 1s;
+}
+.about_top.active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
 @media screen and (max-width: 767px) {
     .about_global {
         display: block;
@@ -599,7 +648,7 @@ button:hover {
 .profile {
     max-width: 690px;
     margin: 0 auto;
-    margin-top: 300px;
+    margin-top: 350px;
 }
 
 .profile_title {
@@ -614,6 +663,16 @@ button:hover {
 
 .profile_text2 {
     line-height: 1.75;
+}
+
+.profile {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 1.5s, transform 1s;
+}
+.profile.active {
+    opacity: 1;
+    transform: translateX(0px);
 }
 
 @media screen and (max-width: 767px) {
@@ -650,6 +709,16 @@ button:hover {
 .skill dd {
     width: 85%;
     margin-bottom: 10px;
+}
+
+.skill {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s, transform 1s;
+}
+.skill.active {
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 @media screen and (max-width: 767px) {
@@ -711,6 +780,16 @@ button:hover {
     line-height: 1.75;
 }
 
+.favorite {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s, transform 1s;
+}
+.favorite.active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
 @media screen and (max-width: 767px) {
     .favorite {
         max-width: 315px;
@@ -730,27 +809,27 @@ button:hover {
 /* あしらい */
 
 .part1 {
-    width: 178px;
+    width: 100px;
     position: absolute;
     right: 100px;
-    top: 600px;
+    top: 315px;
 }
 
 .part2 {
-    width: 99px;
+    width: 50px;
     position: absolute;
-    left: 50px;
+    left: -130px;
 }
 
 @media screen and (max-width: 767px) {
     .part1 {
-        width: 90px;
-        top: 700px;
+        width: 50px;
+        top: 450px;
         right: 50px;
     }
 
     .part2 {
-        width: 70px;
+        display: none;
     }
 }
 
@@ -758,7 +837,15 @@ button:hover {
 
 .profile_back {
     position: absolute;
-    top: 800px;
+    top: 850px;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 1.5s, transform 1s;
+}
+
+.profile_back.active {
+    opacity: 1;
+    transform: translateX(0px);
 }
 
 @media screen and (max-width: 767px) {

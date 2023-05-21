@@ -12,17 +12,16 @@
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
     <header class="header" id="header">
         <div class="main">
             <picture>
-                <source srcset="/Users/miyauchikanna/Desktop/dezasuta/portfolio/img/main_sp@2x.png"
-                    media="(max-width: 767px)">
+                <source srcset="img/main_sp@2x.png" media="(max-width: 767px)">
                 <img src="img/main.png" alt="空と葉">
             </picture>
         </div>
@@ -35,7 +34,10 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="sp_btn open"><span></span></div>
+        <div class="sp_btn">
+            <span></span>
+            <div class="sp_btn_arrow"><img src="img/sp_btn@2x.png" alt="矢印"></div>
+        </div>
         <nav class="sp_nav">
             <ul>
                 <li><a href="#header">Home</a></li>
@@ -90,8 +92,7 @@
     <section class="works">
         <div class="works_back">
             <picture>
-                <source srcset="/Users/miyauchikanna/Desktop/dezasuta/portfolio/img/works_back_sp@2x.png"
-                    media="(max-width: 767px)">
+                <source srcset="img/works_back_sp@2x.png" media="(max-width: 767px)">
                 <img src="img/works_back@2x.png" alt="背景">
             </picture>
         </div>
@@ -285,6 +286,66 @@
             }
         });
 
+    </script>
+
+    <script type="text/javascript">
+        const targets = document.getElementsByClassName('about');
+        for (let i = targets.length; i--;) {
+            let observer = new IntersectionObserver((entries, observer) => {
+                for (let j = entries.length; j--;) {
+                    if (entries[j].isIntersecting) {
+                        entries[j].target.classList.add('active');
+                        observer.unobserve(entries[j].target);
+                    }
+                }
+            });
+            observer.observe(targets[i]);
+        }
+
+        {
+            const targets = document.getElementsByClassName('service');
+            for (let i = targets.length; i--;) {
+                let observer = new IntersectionObserver((entries, observer) => {
+                    for (let j = entries.length; j--;) {
+                        if (entries[j].isIntersecting) {
+                            entries[j].target.classList.add('active');
+                            observer.unobserve(entries[j].target);
+                        }
+                    }
+                });
+                observer.observe(targets[i]);
+            }
+        }
+
+        {
+            const targets = document.getElementsByClassName('works');
+            for (let i = targets.length; i--;) {
+                let observer = new IntersectionObserver((entries, observer) => {
+                    for (let j = entries.length; j--;) {
+                        if (entries[j].isIntersecting) {
+                            entries[j].target.classList.add('active');
+                            observer.unobserve(entries[j].target);
+                        }
+                    }
+                });
+                observer.observe(targets[i]);
+            }
+        }
+
+        {
+            const targets = document.getElementsByClassName('contact');
+            for (let i = targets.length; i--;) {
+                let observer = new IntersectionObserver((entries, observer) => {
+                    for (let j = entries.length; j--;) {
+                        if (entries[j].isIntersecting) {
+                            entries[j].target.classList.add('active');
+                            observer.unobserve(entries[j].target);
+                        }
+                    }
+                });
+                observer.observe(targets[i]);
+            }
+        }
     </script>
 
 </body>

@@ -9,9 +9,9 @@
     <meta name="description" content="Canna desingの自己紹介、できること、好きなものについて">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -25,7 +25,10 @@
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="sp_btn"><span></span></div>
+        <div class="sp_btn">
+            <span></span>
+            <div class="sp_btn_arrow"><img src="img/sp_btn@2x.png" alt="矢印"></div>
+        </div>
         <nav class="sp_nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -55,7 +58,7 @@
             </div>
             <div class="about_img"><img src="img/about@2x.png" alt="後ろ姿"></div>
         </div>
-        <div class="part1"><img src="img/part1@2x.png" alt="葉"></div>
+        <div class="part1 js-parallax"><img src="img/part1@2x.png" alt="葉"></div>
     </section>
 
     <section class="profile">
@@ -67,8 +70,7 @@
 
     <div class="profile_back">
         <picture>
-            <source srcset="/Users/miyauchikanna/Desktop/dezasuta/portfolio/img/works_back_sp@2x.png"
-                media="(max-width: 767px)">
+            <source srcset="img/works_back_sp@2x.png" media="(max-width: 767px)">
             <img src="img/about_back@2x.png" alt="背景">
         </picture>
     </div>
@@ -111,7 +113,7 @@
                 <p>だいたいのお酒飲めます！<br>家ではあまり飲みませんが、飲みに行くのが好きです。</p>
             </div>
         </div>
-        <div class="part2"><img src="img/part2_1@2x.png" alt="葉"></div>
+        <div class="part2 js-parallax"><img src="img/part2_1@2x.png" alt="葉"></div>
     </section>
 
     <footer>
@@ -133,30 +135,97 @@
     <div class="top"><a href="#header"><img src="img/top@2x.png" alt="top"></a></div>
 
     <script>
-        // ページトップフェードイン
-        $('.top').hide();
-        $(window).on('scroll', function () {
-            if ($(this).scrollTop() > 700) {
-                $('.top').fadeIn();
-            } else {
-                $('.top').fadeOut();
-            }
-        });
+        $(function () {
+            $('.sp_btn, .sp_nav li').on('click', function () {
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open');
+            });
+
+            // ページトップフェードイン
+            $('.top').hide();
+            $(window).on('scroll', function () {
+                if ($(this).scrollTop() > 700) {
+                    $('.top').fadeIn();
+                } else {
+                    $('.top').fadeOut();
+                }
+            });
+        })
     </script>
 
-    <script>
-        const images = document.getElementsByClassName('part1');
-        new simpleParallax(images, {
-            delay: .8,
-            transition: 'cubic-bezier(0,0,0,1)'
-        });
-    </script>
-    <script>
-        const images1 = document.getElementsByClassName('part2');
-        new simpleParallax(images, {
-            delay: .8,
-            transition: 'cubic-bezier(0,0,0,1)'
-        });
+    <script type="text/javascript">
+        const targets = document.getElementsByClassName('about_top');
+        for (let i = targets.length; i--;) {
+            let observer = new IntersectionObserver((entries, observer) => {
+                for (let j = entries.length; j--;) {
+                    if (entries[j].isIntersecting) {
+                        entries[j].target.classList.add('active');
+                        observer.unobserve(entries[j].target);
+                    }
+                }
+            });
+            observer.observe(targets[i]);
+        }
+
+        {
+            const targets = document.getElementsByClassName('profile');
+            for (let i = targets.length; i--;) {
+                let observer = new IntersectionObserver((entries, observer) => {
+                    for (let j = entries.length; j--;) {
+                        if (entries[j].isIntersecting) {
+                            entries[j].target.classList.add('active');
+                            observer.unobserve(entries[j].target);
+                        }
+                    }
+                });
+                observer.observe(targets[i]);
+            }
+        }
+
+        {
+            const targets = document.getElementsByClassName('profile_back');
+            for (let i = targets.length; i--;) {
+                let observer = new IntersectionObserver((entries, observer) => {
+                    for (let j = entries.length; j--;) {
+                        if (entries[j].isIntersecting) {
+                            entries[j].target.classList.add('active');
+                            observer.unobserve(entries[j].target);
+                        }
+                    }
+                });
+                observer.observe(targets[i]);
+            }
+        }
+
+        {
+            const targets = document.getElementsByClassName('skill');
+            for (let i = targets.length; i--;) {
+                let observer = new IntersectionObserver((entries, observer) => {
+                    for (let j = entries.length; j--;) {
+                        if (entries[j].isIntersecting) {
+                            entries[j].target.classList.add('active');
+                            observer.unobserve(entries[j].target);
+                        }
+                    }
+                });
+                observer.observe(targets[i]);
+            }
+        }
+
+        {
+            const targets = document.getElementsByClassName('favorite');
+            for (let i = targets.length; i--;) {
+                let observer = new IntersectionObserver((entries, observer) => {
+                    for (let j = entries.length; j--;) {
+                        if (entries[j].isIntersecting) {
+                            entries[j].target.classList.add('active');
+                            observer.unobserve(entries[j].target);
+                        }
+                    }
+                });
+                observer.observe(targets[i]);
+            }
+        }
     </script>
 
 </body>
