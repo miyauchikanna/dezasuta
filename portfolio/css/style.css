@@ -885,6 +885,16 @@ button:hover {
     display: none;
 }
 
+.thankyou {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s, transform 1s;
+}
+.thankyou.active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
 @media screen and (max-width: 767px) {
     .thankyou_block {
         display: block;
@@ -912,7 +922,6 @@ button:hover {
 
     .thankyou_sp {
         display: block;
-        width: 680px;
         margin-right: auto;
     }
 }
